@@ -7,29 +7,11 @@ img {
   max-width: 100%;
 }
 
-h1 {
-  font-family: aviano-didone, serif;
-  font-weight: 300;
+p {
+  font-family: ainslie-sans, sans-serif;
+  font-weight: 400;
   font-style: normal;
-  background-color: white;
-  padding: 0 5px 0 5px;
-}
-
-.bottom {
-  background-image: url(img/markus_hoffmann_lund_splashbillede.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-}
-
-#web_section {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1200px) auto;
-  gap: 100px;
-}
-
-.section_wrapper {
+  font-size: 0.9rem;
 }
 
 header {
@@ -83,4 +65,63 @@ header nav ul li a:hover {
   padding-top: 0.75rem;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+#logo a {
+  font-family: aviano-didone, serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: white;
+  padding: 0 5px 0 5px;
+  text-decoration: none;
+  color: #060606;
+  font-size: 2rem;
+}
+
+.bottom {
+  background-image: url(img/markus_hoffmann_lund_splashbillede.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+#web_section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+.col-left {
+  padding: 50px 25px 50px 50px;
+}
+
+.section_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.col-left h3 {
+  text-align: center;
+  font-family: aviano-didone, serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #060606;
+  font-size: 1.5rem;
+}
+
+.col-right {
+  padding: 50px 50px 50px 25px;
+}
+
+.col-right img {
+  height: 100%;
+  min-height: 0;
+}
+
+.col-right div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
 }
