@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: aviano-didone, serif;
+  font-weight: 300;
+  font-style: normal;
+  background-color: white;
+  padding: 0 5px 0 5px;
+}
+
+.bottom {
+  background-image: url(img/markus_hoffmann_lund_splashbillede.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+#web_section {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1200px) auto;
+  gap: 100px;
+}
+
+.section_wrapper {
+}
+
+header {
+  position: sticky;
+  top: 0;
+  padding: 1rem 1rem;
+  gap: 20px;
+  box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.3);
+  background-color: #060606;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  overflow-x: auto;
+  padding-top: 0.75rem;
+  gap: 80px;
+}
+
+header nav ul li a {
+  font-family: aviano-didone, sans-serif;
+  text-decoration: none;
+  font-weight: 300;
+  color: white;
+  font-size: 1.25rem;
+}
+
+header nav ul li a:hover {
+  color: #060606;
+  font-weight: 700;
+  background-color: white;
+  padding: 0 5px 0 5px;
+}
+
+.cv {
+  font-family: aviano-didone, sans-serif;
+  text-decoration: none;
+  font-weight: 300;
+  color: white;
+  font-size: 1.25rem;
+  padding-top: 0.75rem;
+}
+
+.cv:hover {
+  color: #060606;
+  font-weight: 700;
+  background-color: white;
+  padding-top: 0.75rem;
+  padding-left: 5px;
+  padding-right: 5px;
+}
