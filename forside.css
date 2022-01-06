@@ -37,6 +37,11 @@ h2 {
   font-style: normal;
 }
 
+h1,
+h2 a {
+  transition: background 0.3s ease-in-out;
+}
+
 /* CSS til desktop */
 @media (min-width: 600px) {
   h1 {

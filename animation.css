@@ -1,0 +1,768 @@
+* {
+  margin: 0;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+
+p {
+  font-family: ainslie-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+/* nav menu button */
+.menu-btn {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* tre hvide linjer i burgermenu */
+.menu-btn_lines,
+.menu-btn_lines::before,
+.menu-btn_lines::after {
+  width: 1.5rem;
+  height: 0.1rem;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn_lines::before,
+.menu-btn_lines::after {
+  content: "";
+  position: absolute;
+}
+/* flytter hvid streg op */
+.menu-btn_lines::before {
+  transform: translateY(-0.5rem);
+}
+/* flytter hvid streg ned */
+.menu-btn_lines::after {
+  transform: translateY(0.5rem);
+}
+
+/* burgermenu animation */
+.menu-btn.open .menu-btn_lines {
+  transform: translateX(2rem);
+  background-color: transparent;
+}
+
+.menu-btn.open .menu-btn_lines::before {
+  transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+}
+
+.menu-btn.open .menu-btn_lines::after {
+  transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+}
+
+/* CSS til desktop */
+@media (min-width: 600px) {
+  #spil {
+    padding: 50px 100px 100px 100px;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    padding: 1rem 1rem;
+    gap: 20px;
+    box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.3);
+    background-color: #060606;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  header nav ul {
+    display: flex;
+    list-style: none;
+    overflow-x: auto;
+    padding-top: 0.75rem;
+    gap: 80px;
+  }
+
+  header nav ul li a {
+    font-family: aviano-didone, sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    font-size: 1.25rem;
+    transition: background 0.3s ease-in-out;
+  }
+
+  header nav ul li a:hover {
+    color: #060606;
+    font-weight: 700;
+    background-color: white;
+    padding: 0 5px 0 5px;
+  }
+
+  #logo a {
+    font-family: aviano-didone, serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: white;
+    padding: 0 5px 0 5px;
+    text-decoration: none;
+    color: #060606;
+    font-size: 2rem;
+  }
+
+  .bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 50px 50px 50px 50px;
+  }
+
+  #web_section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .col-left {
+    padding: 50px 25px 50px 50px;
+  }
+
+  .section_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .col-left h3 {
+    text-align: center;
+    font-family: aviano-didone, serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #060606;
+    font-size: 1.5rem;
+  }
+
+  .col-right {
+    padding: 50px 50px 0px 25px;
+    display: grid;
+    place-content: end;
+  }
+
+  .col-right img {
+    height: 100%;
+    min-height: 0;
+    max-width: 80%;
+  }
+}
+
+/* CSS til mobil */
+@media (max-width: 600px) {
+  .menu-btn {
+    display: flex;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(0);
+    background-color: #060606;
+    transition: opacity 0.3s ease-in-out;
+    font-family: aviano-didone, sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    opacity: 0;
+  }
+
+  .menu-items.open {
+    opacity: 1;
+    top: 76px;
+  }
+
+  .menu-items li {
+    height: 100%;
+    list-style: none;
+  }
+
+  .menu-items li a {
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+
+  .menu-items li a:active {
+    color: #060606;
+    background-color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+
+  .col-left {
+    padding: 25px 25px 25px 25px;
+  }
+  .col-left h3 {
+    text-align: center;
+    font-family: aviano-didone, serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #060606;
+    font-size: 1.5rem;
+  }
+
+  .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    padding: 1rem 1rem;
+    gap: 20px;
+    box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.3);
+    background-color: #060606;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  #logo a {
+    font-family: aviano-didone, serif;
+    font-weight: 300;
+    font-style: normal;
+    background-color: white;
+    padding: 0 5px 0 5px;
+    text-decoration: none;
+    color: #060606;
+    font-size: 2rem;
+  }
+}
+
+/* Spil */
+#screen {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#start {
+  background-image: url(SVG/startskaerm.svg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+}
+
+#game_over {
+  background-image: url(SVG/slutskaerm.svg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+}
+
+#level_complete {
+  background-image: url(SVG/levelComplete.svg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+}
+
+#game_background {
+  background-image: url(SVG/spilskaerm.svg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  pointer-events: none;
+}
+
+#game_elements {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#game_foreground {
+  background-image: url(SVG/forgrund_1.svg);
+  position: absolute;
+  background-size: cover;
+  pointer-events: none;
+}
+
+#bacon_container {
+  width: 7%;
+  aspect-ratio: 399/710.13;
+  position: absolute;
+}
+
+#bacon_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/bacon.svg);
+  background-size: cover;
+}
+
+#tomat_container {
+  width: 9%;
+  aspect-ratio: 354/333.98;
+  position: absolute;
+}
+
+#tomat_sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url(SVG/tomat.svg);
+  background-size: cover;
+}
+
+#svamp_container {
+  position: absolute;
+  width: 7%;
+  aspect-ratio: 163/205;
+}
+
+#svamp_sprite {
+  background-image: url(SVG/svamp.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#pepperoni_container {
+  position: absolute;
+  width: 9%;
+  aspect-ratio: 389/345;
+}
+
+#pepperoni_sprite {
+  background-image: url(SVG/pepperoni.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#peberfrugt_container {
+  position: absolute;
+  width: 7.5%;
+  aspect-ratio: 356.41/518.56;
+}
+
+#peberfrugt_sprite {
+  background-image: url(SVG/peberfrugt.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#rotte_container {
+  position: absolute;
+  width: 12%;
+  aspect-ratio: 302/191;
+}
+
+#rotte_sprite {
+  background-image: url(SVG/rotte.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#edderkop_container {
+  position: absolute;
+  width: 10%;
+  aspect-ratio: 306/174;
+}
+
+#edderkop_sprite {
+  background-image: url(SVG/edderkop.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#score_board {
+  background-image: url(SVG/point.svg);
+  background-size: cover;
+  position: absolute;
+  width: 11%;
+  aspect-ratio: 131.14/131.73;
+  left: 6%;
+  top: 80%;
+  pointer-events: none;
+}
+
+#time_board {
+  /* background-image: url(SVG/tid_9.svg); */
+  /* background-size: cover; */
+  position: absolute;
+  width: 56%;
+  aspect-ratio: 1/1;
+  left: 9.1%;
+  top: 1%;
+  pointer-events: none;
+}
+
+#ur_container {
+  height: 39%;
+  width: 8%;
+  border: 2.5px solid black;
+  background-color: darkgray;
+  position: absolute;
+}
+
+#ur_sprite {
+  width: 100%;
+  height: 100%;
+  transform-origin: center bottom;
+}
+
+#energy_board {
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  top: 54%;
+}
+
+#liv1 {
+  left: 0.2%;
+  top: 54%;
+  pointer-events: none;
+}
+#liv2 {
+  left: 7.7%;
+  top: 54%;
+  pointer-events: none;
+}
+
+#liv3 {
+  left: 15.2%;
+  top: 54%;
+  pointer-events: none;
+}
+
+.liv {
+  background-image: url(SVG/stjerne.svg);
+  background-size: cover;
+  position: absolute;
+  width: 7%;
+  aspect-ratio: 805/770;
+  pointer-events: none;
+}
+
+.hide {
+  filter: grayscale(100%);
+  opacity: 80%;
+}
+
+#game_foreground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+}
+
+#game_ui {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+}
+
+#start_knap {
+  background-image: url(SVG/start.svg);
+  aspect-ratio: 131.14/103.12;
+  background-size: cover;
+  position: absolute;
+  width: 20%;
+  top: 56%;
+  left: 65%;
+}
+
+#point {
+  left: 40%;
+  top: 21.5%;
+  position: absolute;
+  font-size: 300%;
+  color: white;
+}
+
+#game_over_points,
+#level_complete_points {
+  left: 7.6%;
+  top: 56%;
+  position: absolute;
+  font-size: 300%;
+}
+
+#genstart1,
+#genstart2 {
+  background-image: url(SVG/restart.svg);
+  aspect-ratio: 383/301;
+  background-size: cover;
+  position: absolute;
+  width: 15%;
+  top: 69%;
+  left: 15%;
+}
+
+.pos_ond_1 {
+  top: 50%;
+  left: 71%;
+}
+
+.pos_ond_2 {
+  top: 23%;
+  left: 71%;
+}
+
+.pos_ond_3 {
+  top: 22%;
+  left: 58%;
+}
+
+.pos_ond_4 {
+  top: 22%;
+  left: 43%;
+}
+
+.pos_god_1 {
+  top: 22%;
+  left: 58%;
+}
+
+.pos_god_2 {
+  top: 22%;
+  left: 30%;
+}
+
+.pos_god_3 {
+  top: 22%;
+  left: 40%;
+}
+
+.pos_god_4 {
+  top: 22%;
+  left: 80%;
+}
+
+.delay1 {
+  animation-delay: 1s;
+}
+
+.delay2 {
+  animation-delay: 2s;
+}
+
+.delay3 {
+  animation-delay: 3s;
+}
+
+.delay4 {
+  animation-delay: 4s;
+}
+
+.speed1 {
+  animation-duration: 1s;
+}
+
+.speed2 {
+  animation-duration: 1.5s;
+}
+
+.speed3 {
+  animation-duration: 2s;
+}
+
+.speed4 {
+  animation-duration: 2.5s;
+}
+
+.hide {
+  display: none;
+}
+
+/* <------------ animationer ----------> */
+
+.falling {
+  animation-name: falling;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  /* animation-delay: 1s; */
+}
+@keyframes falling {
+  0% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(250%);
+  }
+}
+
+.pattern1 {
+  animation-name: pattern;
+  animation-iteration-count: infinite;
+}
+@keyframes pattern {
+  0% {
+    transform: translateX(0) translateY(-160%);
+  }
+  25% {
+    transform: translateX(140%) translateY(0);
+  }
+  50% {
+    transform: translateX(0) translateY(140%);
+  }
+  75% {
+    transform: translateX(-160%) translateY(0);
+  }
+  100% {
+    transform: translateX(0) translateY(-160%);
+  }
+}
+
+.pattern2 {
+  animation-name: pattern2;
+  animation-iteration-count: infinite;
+}
+@keyframes pattern2 {
+  0% {
+    transform: translateX(0) translateY(-160%);
+  }
+  25% {
+    transform: translateX(0) translateY(140%);
+  }
+  50% {
+    transform: translateX(140%) translateY(0);
+  }
+  75% {
+    transform: translateX(-160%) translateY(0);
+  }
+  100% {
+    transform: translateX(0) translateY(-160%);
+  }
+}
+
+.pause {
+  animation-play-state: paused;
+}
+
+.forsvind_god {
+  animation-name: forsvind_god;
+  animation-duration: 0.25s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+@keyframes forsvind_god {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  100% {
+    transform: scale(0) rotate(1turn);
+  }
+}
+
+.forsvind_ond {
+  animation-name: forsvind_ond;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+@keyframes forsvind_ond {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: translateX(800%) translateY(-800%) scale(10) rotate(0.5turn);
+  }
+}
+
+.tid {
+  animation-name: tid;
+  animation-duration: 30s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes tid {
+  0% {
+    transform: scaleY(1);
+    background-color: limegreen;
+  }
+
+  50% {
+    background-color: yellow;
+  }
+
+  100% {
+    transform: scaleY(0);
+    background-color: red;
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

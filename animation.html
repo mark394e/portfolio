@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="animation.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/ojm4jtr.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/ojm4jtr.css" />
+  </head>
+  <body>
+    <header>
+      <div id="logo"><a href="index.html">Markus</a></div>
+
+      <nav>
+        <ul class="menu-items">
+          <li><a href="web.html">web</a></li>
+          <li><a href="ux.html">ux</a></li>
+          <li><a href="animation.html">animation</a></li>
+          <li><a href="content.html">content</a></li>
+          <li><a href="cv.html" class="cv">cv</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-btn">
+        <div class="menu-btn_lines"></div>
+      </div>
+    </header>
+    <main>
+      <section id="web_section">
+        <section class="section_wrapper">
+          <div class="col-left">
+            <h3>Grundlæggende Animation</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+              aspernatur, et eius quisquam placeat quas fugiat perspiciatis ex
+              sed consectetur itaque mollitia nesciunt officiis vero, aut
+              numquam iure aperiam? Ipsa. Eligendi minima nihil, aperiam ducimus
+              ratione culpa beatae corporis delectus voluptas quos a! Aliquam
+              autem illo iusto explicabo modi, quod rem optio, cum eaque eveniet
+              assumenda velit iste! Inventore, voluptatem! Quam maiores fuga
+              laboriosam ut, veritatis, ex sapiente dicta exercitationem magnam
+              obcaecati nisi beatae iusto odio labore. Quam eum consectetur
+              veritatis vitae debitis vero ea nesciunt, illo, est hic autem. Non
+              mollitia nobis saepe sequi soluta itaque pariatur fugit natus
+              doloribus sapiente. Quo veritatis blanditiis sint tempore eum, ut
+              quibusdam facilis quas ad vel fugit asperiores sapiente commodi
+              aperiam. Odit? Rem ducimus architecto pariatur, illum tenetur ab
+              ad similique iusto soluta vitae. Iste veniam sed exercitationem
+              magnam enim suscipit harum id excepturi soluta, laudantium ex, ut
+              officiis. Reiciendis, tempora sequi? Facere dignissimos qui
+              consectetur a, suscipit aliquid temporibus ex fugiat. Corporis
+              reiciendis id aut fugit, ab culpa ea natus suscipit mollitia
+              explicabo animi odit laboriosam ipsum placeat quos autem dolore.
+              Exercitationem quia nobis sit vitae. Voluptas asperiores id
+              inventore.
+            </p>
+          </div>
+          <div class="col-right">
+            <div>
+             <img src="SVG/figur.svg" alt="spilfigur">
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="spil">
+        <div id="screen">
+          <div id="game">
+            <div id="game_background"></div>
+            <div id="game_elements">
+              <div id="bacon_container">
+                <div id="bacon_sprite"></div>
+              </div>
+              <div id="tomat_container">
+                <div id="tomat_sprite"></div>
+              </div>
+              <div id="svamp_container">
+                <div id="svamp_sprite"></div>
+              </div>
+              <div id="pepperoni_container">
+                <div id="pepperoni_sprite"></div>
+              </div>
+              <div id="peberfrugt_container">
+                <div id="peberfrugt_sprite"></div>
+              </div>
+              <div id="rotte_container">
+                <div id="rotte_sprite"></div>
+              </div>
+              <div id="edderkop_container">
+                <div id="edderkop_sprite"></div>
+              </div>
+            </div>
+            <div id="game_foreground"></div>
+            <div id="game_ui">
+              <div id="score_board">
+                <div id="point">0</div>
+              </div>
+              <div id="energy_board">
+                <div class="liv" id="liv1"></div>
+                <div class="liv" id="liv2"></div>
+                <div class="liv" id="liv3"></div>
+              </div>
+              <div id="time_board">
+                <div id="ur_container">
+                  <div id="ur_sprite"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="start">
+            <div id="start_knap"></div>
+          </div>
+          <div id="game_over">
+            <div id="game_over_points">0</div>
+            <div id="genstart1"></div>
+          </div>
+          <div id="level_complete">
+            <div id="level_complete_points">0</div>
+            <div id="genstart2"></div>
+          </div>
+        </div>
+
+        <div id="audio">
+          <audio src="lyd/mmmh.mp3" id="lyd_god"></audio>
+          <audio src="lyd/wuuHuu.mp3" id="lyd_god2"></audio>
+          <audio src="lyd/adr.mp3" id="lyd_ond"></audio>
+          <audio src="lyd/scream.mp3" id="lyd_ond2"></audio>
+          <audio src="lyd/ahYeahMamaMia.mp3" id="lyd_levelComplete"></audio>
+          <audio src="lyd/wuHuMamaMia.mp3" id="lyd_levelComplete2"></audio>
+          <audio src="lyd/ohNo_mamaMia.mp3" id="lyd_gameOver"></audio>
+          <audio src="lyd/startGame_30sec.mp3" id="lyd_startGame"></audio>
+          <audio src="lyd/startGame_30sec_2.mp3" id="lyd_startGame2"></audio>
+          <audio src="lyd/gameOver_15sec.mp3" id="lyd_gameOver_musik"></audio>
+          <audio src="lyd/gameOver_5sec.mp3" id="lyd_gameOver_musik2"></audio>
+          <audio
+            src="lyd/levelComplete_5sec.mp3"
+            id="lyd_levelComplete_musik"
+          ></audio>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="spil.js"></script>
+  </body>
+</html>
