@@ -116,6 +116,9 @@ p {
   }
 
   .bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
     padding: 50px 50px 50px 50px;
   }
 
@@ -123,6 +126,12 @@ p {
     display: grid;
     grid-template-columns: 1fr;
     gap: 50px;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .col-left {
@@ -150,13 +159,6 @@ p {
   .col-right img {
     height: 100%;
     min-height: 0;
-  }
-
-  .col-right div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
   }
 }
 
