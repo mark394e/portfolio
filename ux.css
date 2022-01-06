@@ -182,11 +182,13 @@ p {
     font-weight: 300;
     color: white;
     opacity: 0;
+    pointer-events: none;
   }
 
   .menu-items.open {
     opacity: 1;
     top: 76px;
+    pointer-events: visible;
   }
 
   .menu-items li {
