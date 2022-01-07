@@ -5,6 +5,8 @@
 }
 img {
   max-width: 100%;
+  border: 2px solid #060606;
+  box-shadow: 5px 10px 10px #7d7d7d;
 }
 
 p {
@@ -161,6 +163,10 @@ p {
 
 /* CSS til mobil */
 @media (max-width: 600px) {
+  main {
+    margin: 25px;
+  }
+
   .menu-btn {
     display: flex;
   }
@@ -173,7 +179,7 @@ p {
     top: 100%;
     right: 0;
     left: 0;
-    height: 100vh;
+    height: 50vh;
     transform: translateX(0);
     background-color: #060606;
     transition: opacity 0.3s ease-in-out;
@@ -220,7 +226,7 @@ p {
   }
 
   .col-left {
-    padding: 25px 25px 25px 25px;
+    padding-bottom: 25px;
   }
   .col-left h3 {
     text-align: center;
