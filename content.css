@@ -16,6 +16,14 @@ p {
   font-size: 0.9rem;
 }
 
+p a {
+  font-family: ainslie-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: black;
+}
+
 /* nav menu button */
 .menu-btn {
   position: relative;
